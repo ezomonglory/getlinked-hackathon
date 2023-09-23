@@ -12,7 +12,7 @@ import axios from 'axios'
 const Register = () => {
     const router = useRouter()
     const [open, setOpen] = useState(false)
-    const [err, setErr] =useState("")
+    const [err, setErr] = useState("")
     const nameRef = useRef()
     const groupRef = useRef()
     const topicRef = useRef()
@@ -43,7 +43,7 @@ const Register = () => {
             console.log(res)
             setLoad(false)
             setOpen(true)
-            
+
         }).catch((err) => {
             console.log(err.response.data.email)
             setErr(err.response.data.email)
@@ -84,13 +84,16 @@ const Register = () => {
                         </div>
 
                         <div className='contact-bg md:w-[50%] py-[40px]  '>
-                            {err && (<p className='text-red-500 text-center '>{ err} </p>)}
+                            {err && (<p className='text-red-500 text-center '>{err} </p>)}
                             <div className='w-[80%] mx-auto '>
                                 <h1 className='text-[32px] text-[#D434FE] mb-[20px] md:mb-[40px] clash-semi' >Register</h1>
 
                                 <div className='flex items-end md:gap-[10px] mb-[10px] md:mb-[20px] '>
                                     <p className='text-white text-[14px] md:text-[16px] ' >Be part of this movement!</p>
-                                    <img src="/images/line.svg" alt="line" />
+                                    <svg width="101" height="1" viewBox="0 0 101 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line y1="0.5" x2="101" y2="0.5" stroke="#D434FE" stroke-dasharray="2 2" />
+                                    </svg>
+
                                     <div className='ml-[-100px] flex '>
                                         <img src="/images/reg-wom.svg" alt="line" />
                                         <img src="/images/reg1.svg" alt="line" />
