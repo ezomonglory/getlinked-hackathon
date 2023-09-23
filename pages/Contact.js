@@ -29,6 +29,7 @@ const Contact = () => {
 
         axios.post("https://backend.getlinked.ai/hackathon/contact-form", data).then((res) => {
             console.log(res)
+            alert("Message sent Successfully")
             setLoad(false)
             mailRef.current.value = ''
             numberRef.current.value = ''
